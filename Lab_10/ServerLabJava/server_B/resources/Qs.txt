@@ -1,0 +1,63 @@
+QUESTION|Al cui fiu adoptiv a fost împăratul Augustus?
+OPTION|A|Diogene
+OPTION|B|Iulius Cezar
+OPTION|C|Nero
+OPTION|D|Antonius
+ANSWER|B
+POINTS|10
+
+QUESTION|Cat face 7 x 8?
+OPTION|A|54
+OPTION|B|56
+OPTION|C|64
+OPTION|D|48
+ANSWER|B
+POINTS|10
+
+QUESTION|Care planeta este cea mai mare din sistemul solar?
+OPTION|A|Saturn
+OPTION|B|Pamant
+OPTION|C|Jupiter
+OPTION|D|Neptun
+ANSWER|C
+POINTS|10
+
+QUESTION|Care mare oraș a pus în funcțiune prima linie de tramvai urbană în 1832?
+OPTION|A|New York
+OPTION|B|Londra
+OPTION|C|Berlin
+OPTION|D|Viena
+ANSWER|A
+POINTS|10
+
+QUESTION|În ce an a avut loc reunificarea Germaniei?
+OPTION|A|1989
+OPTION|B|1990
+OPTION|C|1991
+OPTION|D|1992
+ANSWER|B
+POINTS|10
+
+QUESTION|Cate culori are curcubeul?
+OPTION|A|5
+OPTION|B|6
+OPTION|C|7
+OPTION|D|8
+ANSWER|C
+POINTS|10
+
+QUESTION|Cum se numesc plantele care își pierd frunzele toamna??
+OPTION|A|Central Conifere
+OPTION|B|Computer Foioase
+OPTION|C|Central Carnivore
+OPTION|D|Core Veșnic-verzi
+ANSWER|A
+POINTS|10
+
+QUESTION|De unde am șterpelit toate aceste întrebări?
+OPTION|A|Bibliotecă
+OPTION|B|Wikipedia
+OPTION|C|https://www.wooclap.com/ro/blog/30-best-trivia-questions/
+OPTION|D|AI
+ANSWER|D
+POINTS|20

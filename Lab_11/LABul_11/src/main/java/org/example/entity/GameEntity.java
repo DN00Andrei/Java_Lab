@@ -27,6 +27,23 @@ public class GameEntity {
     @Column(name = "modificat_la")
     private LocalDateTime modificatLa = LocalDateTime.now();
 
+    /*
+    @ManyToMany
+    @JoinTable(
+        name = "game_players",
+        joinColumns = @JoinColumn(name = "game_id", foreignKey = @ForeignKey(name = "FK_game_to_player")),
+        inverseJoinColumns = @JoinColumn(name = "player_id", foreignKey = @ForeignKey(name = "FK_player_to_game"))
+    )
+    private Set<PlayerEntity> jucatori = new LinkedHashSet<>();
+
+    @OneToMany(mappedBy = "joc", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ResultEntity> rezultate = new ArrayList<>();
+
+    @UpdateTimestamp
+    private LocalDateTime modificatLa;
+
+    */
+
     @ManyToMany
     @JoinTable(
         name = "game_players",
@@ -43,7 +60,12 @@ public class GameEntity {
         modificatLa = LocalDateTime.now();
     }
 
-    public GameEntity() {}
+
+
+
+
+
+       public GameEntity() {}
 
     public GameEntity(LocalDateTime inceputLa) {
         this.inceputLa = inceputLa;

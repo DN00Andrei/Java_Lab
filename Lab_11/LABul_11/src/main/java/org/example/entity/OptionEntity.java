@@ -10,10 +10,10 @@ public class OptionEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String litera;
+private String litera;
     private String text;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+       @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id", nullable = false)
     private QuestionEntity intrebare;
 
@@ -27,7 +27,8 @@ public class OptionEntity {
 
     public Long getId() { return id; }
     public String getLitera() { return litera; }
-    public String getText() { return text; }
-    public QuestionEntity getIntrebare() { return intrebare; }
+    public String getText(){ return text; }
+    public QuestionEntity getIntrebare() { 
+    return intrebare; }
     public void setIntrebare(QuestionEntity intrebare) { this.intrebare = intrebare; }
 }

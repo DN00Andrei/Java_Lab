@@ -19,35 +19,28 @@ public class QuizDBApp implements CommandLineRunner {
 
     private final QuizService quizService;
 
-    public QuizDBApp(QuizService quizService) {
-        this.quizService = quizService;
-    }
+    public QuizDBApp(QuizService quizService) { this.quizService = quizService;  }
 
-    public static void main(String[] args) {
-        SpringApplication.run(QuizDBApp.class, args);
-    }
+    public static void main(String[] args) { SpringApplication.run(QuizDBApp.class, args); }
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("=== Pornesc testul bazei de date ===");
+        log.info(" Pornesc testul bazei de date");
 
-        PlayerEntity bob = quizService.salveazaJucator("Bob", false);
+        PlayerEntity bob = quizService.salveazaJucator("Bob", false); //foarte creative denumirile, stiu
         PlayerEntity ana = quizService.salveazaJucator("Ana", false);
         PlayerEntity bot = quizService.salveazaJucator("BotRandom", true);
 
         Map<String, String> optiuni1 = new LinkedHashMap<>();
         optiuni1.put("A", "Diogene");
         optiuni1.put("B", "Iulius Cezar");
-        optiuni1.put("C", "Nero");
-        optiuni1.put("D", "Antonius");
-        QuestionEntity q1 = quizService.salveazaIntrebare(
-                "Al cui fiu adoptiv a fost imparatul Augustus?", "B", 10, optiuni1);
+        optiuni1.put("C", "Nero"); optiuni1.put("D", "Antonius");
+        QuestionEntity q1 = quizService.salveazaIntrebare(   "Al cui fiu adoptiv a fost imparatul Augustus?", "B", 10, optiuni1);
 
         Map<String, String> optiuni2 = new LinkedHashMap<>();
-        optiuni2.put("A", "54");
-        optiuni2.put("B", "56");
-        optiuni2.put("C", "64");
-        optiuni2.put("D", "48");
+        optiuni2.put("A", "54");  optiuni2.put("B", "56");  optiuni2.put("C", "64");  optiuni2.put("D", "48");
+
+
         QuestionEntity q2 = quizService.salveazaIntrebare("Cat face 7 x 8?", "B", 10, optiuni2);
 
         GameEntity joc = quizService.incepeJoc(List.of(bob, ana, bot));
@@ -67,12 +60,12 @@ public class QuizDBApp implements CommandLineRunner {
         log.info("=== Jucatori umani in DB ===");
         quizService.totiJucatoriiUmani().forEach(p -> log.info("  -> {}", p));
 
-        log.info("=== Rezultate joc {} ===", joc.getId());
+        log.info("!!! Rezultate joc {} !!!", joc.getId());
         quizService.rezultatePentruJoc(joc.getId()).forEach(r -> log.info("  -> {}", r));
 
         log.info("=== Audit Log ===");
         quizService.getAuditLog().forEach(a -> log.info("  -> {}", a));
 
-        log.info("=== Test terminat cu succes! ===");
+        log.info(" NU pot sa cred, test terminat cu succes! ");
     }
 }
